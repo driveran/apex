@@ -19,6 +19,13 @@ release/
 output/
 output_resource/
 log/
+@mf-types/
+
+# Symlinks to shared workspace tooling config (../.claude, ../.cursor, ../mcp.json
+# in the parent ~/dev workspace) — regenerated per-checkout, not repo-specific.
+.claude/
+.cursor/
+.mcp.json
 
 .vscode/**/*
 !.vscode/settings.json

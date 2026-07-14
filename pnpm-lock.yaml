@@ -10,20 +10,26 @@ importers:
     dependencies:
       '@modern-js/runtime':
         specifier: 3.6.0
-        version: 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
+        version: 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
+      '@module-federation/modern-js-v3':
+        specifier: ^2.7.0
+        version: 2.7.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react-router-dom@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-router@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
       react:
         specifier: ^19.2.3
         version: 19.2.7
       react-dom:
         specifier: ^19.2.0
         version: 19.2.7(react@19.2.7)
+      react-router-dom:
+        specifier: ^7.18.1
+        version: 7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
       '@modern-js/app-tools':
         specifier: 3.6.0
-        version: 3.6.0(@rspack/core@2.1.3(@swc/helpers@0.5.23))(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+        version: 3.6.0(@module-federation/runtime-tools@2.7.0)(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(core-js@3.49.0)(encoding@0.1.13)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
       '@modern-js/tsconfig':
         specifier: 3.6.0
         version: 3.6.0
@@ -491,6 +497,131 @@ packages:
         optional: true
       react-dom:
         optional: true
+
+  '@module-federation/bridge-react-webpack-plugin@2.7.0':
+    resolution: {integrity: sha512-+7eYeJnIaofQHha8CK+FxPAXMIigd2xwONHi9rlYpdGqpCBIggRKMqL0b1owyDDNiAPF2lWUbxeNm0oUfF7GbA==}
+
+  '@module-federation/bridge-react@2.7.0':
+    resolution: {integrity: sha512-i+RDBvAYVxZklRZwD50crqEewP8YYhwZ0LwO6rA2GLXVgcf7OR2aFVE0HLURByoT/oX86dyvKgVvPtXZLHNUhw==}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+      react-router: ^6 || ^7
+      react-router-dom: ^4 || ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      react-router:
+        optional: true
+      react-router-dom:
+        optional: true
+
+  '@module-federation/cli@2.7.0':
+    resolution: {integrity: sha512-Nx5PQFmYqiiiIaU8uyzFcm9j8bNGb0SEo1GvbjI4ehfRJ5a92sUjNE++Q3o6zmVDI4wDXIhpGxioYdXi5QF40w==}
+    engines: {node: '>=16.0.0'}
+    hasBin: true
+
+  '@module-federation/dts-plugin@2.7.0':
+    resolution: {integrity: sha512-mVKeGUf/7iqRMAFfikhsr2zXtA70WuzJdS1bPqqoeLQNRGXBLDjedcDG26RpIlsvuZcmIOqgN5Z6qw7Bh/HZUg==}
+    peerDependencies:
+      typescript: ^4.9.0 || ^5.0.0 || ^6.0.0
+      vue-tsc: '>=1.0.24'
+    peerDependenciesMeta:
+      vue-tsc:
+        optional: true
+
+  '@module-federation/enhanced@2.7.0':
+    resolution: {integrity: sha512-1ZaiFIsFdH68MLoU7jrYxwhDt4WbDqmuTcnVsRqp9QZhZsex9h2zkeNpZdctL2Q1BtGsuNJ4ngJCOmO84O+6CQ==}
+    hasBin: true
+    peerDependencies:
+      typescript: ^4.9.0 || ^5.0.0 || ^6.0.0
+      vue-tsc: '>=1.0.24'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vue-tsc:
+        optional: true
+      webpack:
+        optional: true
+
+  '@module-federation/error-codes@2.7.0':
+    resolution: {integrity: sha512-syToF3H77IbBhJ7auGMCIb5ZDmJ5tvaqSeEvncJrOCq7JBT96F4UDlQDyNh6kCVznvYqqHsPeEMrfI9b5/Omlg==}
+
+  '@module-federation/inject-external-runtime-core-plugin@2.7.0':
+    resolution: {integrity: sha512-8xHVUWsnlYd1vQPUjVEO+OPBhBjbdur+jp33QwqwkJkSUW/WOgnybCevVyfiA05aaiSyPo1PluQPT6uhImVb7A==}
+    peerDependencies:
+      '@module-federation/runtime-tools': 2.7.0
+
+  '@module-federation/managers@2.7.0':
+    resolution: {integrity: sha512-cWohiUvSrY6dIfhwsRABmEWfvJiAD5u/gxU7XRk7bx5nYPj7qn5gvYWJtvLNWzenluHZR6sib+03QMlyo+MYKQ==}
+
+  '@module-federation/manifest@2.7.0':
+    resolution: {integrity: sha512-phK5/pK/e0JyjMh7a2tvRXUFE0WCG9lxu4BtBQllZXNO0zjrroOHl2s/0sSUCdOq6NIL1HF9wTAudYiCKmNFjA==}
+
+  '@module-federation/modern-js-v3@2.7.0':
+    resolution: {integrity: sha512-HiTplBM9z4g9WXrIbifRuCira845fALpPXFpeuDrOCnNVuWYrAh0MZNQwv3A8oyi/7zcTSXElotnvGqFCQwp6w==}
+    peerDependencies:
+      react: '>=17'
+      react-dom: '>=17'
+      react-router: ^7
+      react-router-dom: ^4 || ^5 || ^6 || ^7
+      typescript: ^4.9.0 || ^5.0.0 || ^6.0.0
+      vue-tsc: ^1.0.24
+    peerDependenciesMeta:
+      react-router:
+        optional: true
+      react-router-dom:
+        optional: true
+      typescript:
+        optional: true
+      vue-tsc:
+        optional: true
+
+  '@module-federation/node@2.7.46':
+    resolution: {integrity: sha512-LgrV5NU8SHKznzxl1gAtAYiWT0lFe9K8+mYNZ1atGkhpQiSeQFVsQbObZq5USs0dgjmpZtLtkwfFOQ66fKyNRA==}
+    peerDependencies:
+      webpack: ^5.40.0
+    peerDependenciesMeta:
+      webpack:
+        optional: true
+
+  '@module-federation/rsbuild-plugin@2.7.0':
+    resolution: {integrity: sha512-rB001vPryB94/ytTzvDyVS5PGB82ImWLY938DrPjSqmG+rQWPRyV7QmDPodwDEzZEUvlWGS+MOu4CmqtrkRKpA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@rsbuild/core': ^1.3.21 || ^2.0.0-0
+    peerDependenciesMeta:
+      '@rsbuild/core':
+        optional: true
+
+  '@module-federation/rspack@2.7.0':
+    resolution: {integrity: sha512-VbYc/5cpIze16ysBZJvmeXU7NN8tAs6Q/MdDsllIwO+Ir7JIEXgGrs5Bs+K7BuAu3HpxyRC8KanJTD+JB91+WA==}
+    peerDependencies:
+      '@rspack/core': ^0.7.0 || ^1.0.0 || ^2.0.0-0
+      typescript: ^4.9.0 || ^5.0.0 || ^6.0.0
+      vue-tsc: '>=1.0.24'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vue-tsc:
+        optional: true
+
+  '@module-federation/runtime-core@2.7.0':
+    resolution: {integrity: sha512-5ROZLVIeV9YnWO2RwCwSHcy6sh48yclErO/2GZ2Xe8lFubPrFirgU8pbwBjZw+All0ZzN44BGS4ECRMVFzVcpg==}
+
+  '@module-federation/runtime-tools@2.7.0':
+    resolution: {integrity: sha512-AY61QeZ0jV0GywgR9j3Yd37KiXoY6gaSYABhjDF3q7XL9PNtb2Ezm1F/985wqaKJYX+qJvYv+PMH6hTvyHdPYQ==}
+
+  '@module-federation/runtime@2.7.0':
+    resolution: {integrity: sha512-UtLozKKNvhT0D1+F0MEWsAmddJ39ItKW15E22LVMAwXmYZRSnzIvJQ2Y6kQ4LwhWABsw/GRSpUDex5OfhpSQPw==}
+
+  '@module-federation/sdk@2.7.0':
+    resolution: {integrity: sha512-piiLEjaIdjbNq8E11Di6vsfryhcdN/+sBCH6NjG7gSU2VHHoHEayZQWWL7VVdS6rVjexF9McLhPTSrl0adUU+A==}
+
+  '@module-federation/third-party-dts-extractor@2.7.0':
+    resolution: {integrity: sha512-hZJKkngQ4hwe0U+vrT3KOsU11qoHCQK0wB4x1bXoTgpTfV9j5NSuddOyRmwbvXpir9bDWh3xy7ghqsx3mFf3kA==}
+
+  '@module-federation/webpack-bundler-runtime@2.7.0':
+    resolution: {integrity: sha512-3qLRIqcZVBNgJrZpiEzcTP8a6+mCdUV1QGk/XljawsQHyNieMVdLQtdLvkoF5Z5kRXNMovq+wv3vchKOMWyA8w==}
 
   '@napi-rs/wasm-runtime@1.1.6':
     resolution: {integrity: sha512-ZLv/JdUfkvOy9eCnnBaGfiO+XimbjebAeO+MRQqD/B+FR1tnRN0tpKSJHRbE8sFfS6aqsXZ67TQjfwfsxULVbg==}
@@ -971,6 +1102,9 @@ packages:
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
 
+  '@swc/helpers@0.5.17':
+    resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
+
   '@swc/helpers@0.5.23':
     resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
 
@@ -1014,6 +1148,9 @@ packages:
 
   '@types/react@19.2.17':
     resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
+
+  '@types/semver@7.5.8':
+    resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
 
   '@types/yargs-parser@21.0.3':
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
@@ -1128,6 +1265,10 @@ packages:
     resolution: {integrity: sha512-xRQbDb9BnwDafYNn6Vwl839DYVjqXYb1XVGtWAZ1kcDc6iwAL4hg3B1dZlRiuENFeO2H53gFG3in621AdERVAg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  adm-zip@0.5.10:
+    resolution: {integrity: sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==}
+    engines: {node: '>=6.0'}
 
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -1383,6 +1524,10 @@ packages:
       typescript:
         optional: true
 
+  cron-parser@4.9.0:
+    resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
+    engines: {node: '>=12.0.0'}
+
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -1489,6 +1634,10 @@ packages:
     resolution: {integrity: sha512-WboRycPNsVw3B3TL559F7kuBUM4d8CgMEvk6xEJlOp7OBPjt6G7z8WMWlD2rOFZLk6OYfFIUGsCOWzcQH9K2og==}
     engines: {node: '>= 6'}
 
+  data-uri-to-buffer@4.0.1:
+    resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
+    engines: {node: '>= 12'}
+
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
     engines: {node: '>=6.0'}
@@ -1566,6 +1715,13 @@ packages:
     resolution: {integrity: sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==}
     engines: {node: '>= 4'}
 
+  empathic@2.0.0:
+    resolution: {integrity: sha512-i6UzDscO/XfAcNYD75CfICkmfLedpyPDdozrLMmQc5ORaQcdMoc21OnlEylMIqI7U8eniKrPMxxtj8k0vhmJhA==}
+    engines: {node: '>=14'}
+
+  encoding@0.1.13:
+    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
+
   enhanced-resolve@5.24.2:
     resolution: {integrity: sha512-rpsZEGT1jFuve6QlpyRp9ckQ+kN61hvF9BzCPyMdaKTm8UJce96KBn3sorXOFXlzjPrs3Vc4T1NsSroZ3PxlFw==}
     engines: {node: '>=10.13.0'}
@@ -1642,6 +1798,9 @@ packages:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
 
+  exsolve@1.0.8:
+    resolution: {integrity: sha512-LmDxfWXwcTArk8fUEnOfSZpHOJ6zOMUJKOtFLFqJLoKJetuQG874Uc7/Kki7zFLzYybmZhp1M7+98pfMqeX8yA==}
+
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
@@ -1654,6 +1813,10 @@ packages:
 
   fastq@1.20.1:
     resolution: {integrity: sha512-GGToxJ/w1x32s/D2EKND7kTil4n8OVk/9mycTc4VDza13lOvpUZTGX3mFSCtV9ksdGBVzvsyAVLM6mHFThxXxw==}
+
+  fetch-blob@3.2.0:
+    resolution: {integrity: sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==}
+    engines: {node: ^12.20 || >= 14.13}
 
   file-uri-to-path@1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
@@ -1689,6 +1852,10 @@ packages:
   form-data@4.0.6:
     resolution: {integrity: sha512-vKatAh4SlVfgbv+YtmhiRjhEMJsYpsG1Y2rMQtR+SVSbytsSD1YGzDIcrAJmdFec88u/+VoGmxnl+80gL1tRCQ==}
     engines: {node: '>= 6'}
+
+  formdata-polyfill@4.0.10:
+    resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
+    engines: {node: '>=12.20.0'}
 
   fraction.js@5.3.4:
     resolution: {integrity: sha512-1X1NTtiJphryn/uLQz3whtY6jK3fTqoE3ohKs0tT+Ujr1W59oopxmoEh7Lu5p6vBaPbgoM0bzveAW4Qi5RyWDQ==}
@@ -1876,6 +2043,11 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
+  isomorphic-ws@5.0.0:
+    resolution: {integrity: sha512-muId7Zzn9ywDsyXgTIafTry2sV3nySZeUDe6YedVd1Hvuuep5AsIlqK+XefWpYTyJG5e503F2xIuT2lcU6rCSw==}
+    peerDependencies:
+      ws: '*'
+
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
 
@@ -1894,6 +2066,10 @@ packages:
   jest-worker@30.4.1:
     resolution: {integrity: sha512-SHynN/q/QD++iNyvMdy+WMmbCGk8jIsNcRxycXbWubSOhvo6T+j2afcfUSl+3hYsiBebOTo0cT7c2H7CXugu1g==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
+  jiti@2.4.2:
+    resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
+    hasBin: true
 
   jiti@2.7.0:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
@@ -1978,6 +2154,9 @@ packages:
   lodash@4.18.1:
     resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
+  long-timeout@0.1.1:
+    resolution: {integrity: sha512-BFRuQUqc7x2NWxfJBCyUrN8iYUYznzL9JROmRz1gZ6KlOIgmoD+njPVbb+VNn2nGMKggMsK79iUNErillsrx7w==}
+
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
@@ -1990,6 +2169,10 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  luxon@3.7.2:
+    resolution: {integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==}
+    engines: {node: '>=12'}
 
   make-dir@5.1.0:
     resolution: {integrity: sha512-IfpFq6UM39dUNiphpA6uDezNx/AvWyhwfICWPR3t1VspkgkMZrL+Rk1RbN1bx+aeNYwOrqGJgEgV3yotk+ZUVw==}
@@ -2134,6 +2317,11 @@ packages:
   node-addon-api@7.1.1:
     resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
 
+  node-domexception@1.0.0:
+    resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
+    engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
+
   node-fetch@2.7.0:
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
     engines: {node: 4.x || >=6.0.0}
@@ -2143,6 +2331,10 @@ packages:
       encoding:
         optional: true
 
+  node-fetch@3.3.0:
+    resolution: {integrity: sha512-BKwRP/O0UvoMKp7GNdwPlObhYGB5DQqwhEDQlNKuoqwVYSxkSZCSbHjnFFmUEtwSKRPU4kNK8PbDYYitwaE3QA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
   node-gyp-build@4.8.4:
     resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
     hasBin: true
@@ -2150,6 +2342,10 @@ packages:
   node-releases@2.0.51:
     resolution: {integrity: sha512-wRNIrw4DmVLKQlbgOMdkMx27Wrpzes2hh5Jtbi2bjPd+4wJstWIqP5A+lscnqbm0xxmT5Bpg8Lec5ItEBwx6BQ==}
     engines: {node: '>=18'}
+
+  node-schedule@2.1.1:
+    resolution: {integrity: sha512-OXdegQq03OmXEjt2hZP33W2YPs/E5BcFQks46+G2gAxs4gHOIVD1u7EqlYLYSKsaIpyKCK9Gbk0ta1/gjRSMRQ==}
+    engines: {node: '>=6'}
 
   nopt@8.1.0:
     resolution: {integrity: sha512-ieGu42u/Qsa4TFktmaKEwM6MQH0pOWnaB3htzh0JRtx84+Mebc0cbZYN5bC+6WTZ4+77xrL9Pn5m7CV6VIkV7A==}
@@ -2649,6 +2845,11 @@ packages:
     peerDependencies:
       react: ^19.2.7
 
+  react-error-boundary@4.1.2:
+    resolution: {integrity: sha512-GQDxZ5Jd+Aq/qUxbCm1UtzmL/s++V7zKgE8yMktJiCQXCCFZnMZh9ng+6/Ne6PjNSXH0L9CjeOEREfRnq6Duag==}
+    peerDependencies:
+      react: '>=16.13.1'
+
   react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
 
@@ -2667,8 +2868,25 @@ packages:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
 
+  react-router-dom@7.18.1:
+    resolution: {integrity: sha512-KaZh+X/6UtEp28x51AUYZDMg9NGoz2ja3dNHa+ta/tk40vCzKhQ/RypCWBMLbmDr6//E24Vv5uPsrqXFozdkAg==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+
   react-router@7.15.1:
     resolution: {integrity: sha512-R8rl9HhgikFYoPJymnUtPXWbnDb3oget6lQnfIoupbt61aT9aOhRkDsY2XRhZRyX1Z/8a5sL74fXmFNm3NRK5A==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
+  react-router@7.18.1:
+    resolution: {integrity: sha512-GDLgg3i3uM0aeJO3Fm+TCS+sDQ7gu12T6x0qdTEzcwqEfleci7JwugVNIF3U//0FWKnJT7ptG+20B2jfDqnZAg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -2891,12 +3109,21 @@ packages:
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
+  schema-utils@4.3.0:
+    resolution: {integrity: sha512-Gf9qqc58SpCA/xdziiHz35F4GNIWYWZrEshUc/G/r5BnLph6xpKuLeoJoQuj5WfBIx/eQLf+hmVPYHaxJu7V2g==}
+    engines: {node: '>= 10.13.0'}
+
   schema-utils@4.3.3:
     resolution: {integrity: sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==}
     engines: {node: '>= 10.13.0'}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
+    hasBin: true
+
+  semver@7.6.3:
+    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
+    engines: {node: '>=10'}
     hasBin: true
 
   semver@7.8.5:
@@ -2932,6 +3159,9 @@ packages:
 
   snake-case@3.0.4:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
+
+  sorted-array-functions@1.3.0:
+    resolution: {integrity: sha512-2sqgzeFlid6N4Z2fUQ1cvFmTOLRi/sEDzSQ0OKYchqgoPmQBVyM3959qYx3fpS6Esef80KjmpgPeEr028dP3OA==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -3011,6 +3241,10 @@ packages:
     resolution: {integrity: sha512-gAQ9qrUN/UCypHtGFbbe7Rc/f9bzO88IwrG8TDo/aMKAApKyD6E3W4Cm0EfhfBb6Z6SKt59tTCTfD+n1xmAvMg==}
     engines: {node: '>=16.0.0'}
 
+  tapable@2.3.0:
+    resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
+    engines: {node: '>=6'}
+
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
@@ -3073,9 +3307,17 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
+  undici@7.28.0:
+    resolution: {integrity: sha512-cRZYrTDwWznlnRiPjggAGxZXanty6M8RV1ff8Wm4LWXBp7/IG8v5DnOm74DtUBp9OONpK75YlPnIjQqX0dBDtA==}
+    engines: {node: '>=20.18.1'}
+
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
+
+  upath@2.0.1:
+    resolution: {integrity: sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==}
+    engines: {node: '>=4'}
 
   update-browserslist-db@1.2.3:
     resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
@@ -3543,12 +3785,12 @@ snapshots:
       lodash: 4.18.1
       react: 19.2.7
 
-  '@mapbox/node-pre-gyp@2.0.3':
+  '@mapbox/node-pre-gyp@2.0.3(encoding@0.1.13)':
     dependencies:
       consola: 3.4.2
       detect-libc: 2.1.2
       https-proxy-agent: 7.0.6
-      node-fetch: 2.7.0
+      node-fetch: 2.7.0(encoding@0.1.13)
       nopt: 8.1.0
       semver: 7.8.5
       tar: 7.5.20
@@ -3556,29 +3798,29 @@ snapshots:
       - encoding
       - supports-color
 
-  '@modern-js/app-tools@3.6.0(@rspack/core@2.1.3(@swc/helpers@0.5.23))(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
+  '@modern-js/app-tools@3.6.0(@module-federation/runtime-tools@2.7.0)(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(core-js@3.49.0)(encoding@0.1.13)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
     dependencies:
       '@babel/parser': 7.29.7
       '@babel/traverse': 7.29.7
       '@babel/types': 7.29.7
-      '@modern-js/builder': 3.6.0(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+      '@modern-js/builder': 3.6.0(@module-federation/runtime-tools@2.7.0)(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
       '@modern-js/i18n-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/plugin': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/plugin': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/plugin-data-loader': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/prod-server': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/server': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/server-core': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/prod-server': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/server': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/server-core': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/server-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/types': 3.6.0
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
       '@swc/core': 1.15.41(@swc/helpers@0.5.23)
       '@swc/helpers': 0.5.23
       es-module-lexer: 1.7.0
       flatted: 3.4.2
       import-meta-resolve: 4.2.0
       mlly: 1.8.2
-      ndepe: 0.1.13
+      ndepe: 0.1.13(encoding@0.1.13)
       pkg-types: 1.3.1
       std-env: 3.10.0
     transitivePeerDependencies:
@@ -3606,21 +3848,21 @@ snapshots:
       - utf-8-validate
       - webpack
 
-  '@modern-js/builder@3.6.0(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
+  '@modern-js/builder@3.6.0(@module-federation/runtime-tools@2.7.0)(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(tslib@2.8.1)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
     dependencies:
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
-      '@rsbuild/plugin-assets-retry': 2.0.1(@rsbuild/core@2.1.0(core-js@3.49.0))
-      '@rsbuild/plugin-check-syntax': 2.0.0(@rsbuild/core@2.1.0(core-js@3.49.0))
-      '@rsbuild/plugin-css-minimizer': 2.0.1(@rsbuild/core@2.1.0(core-js@3.49.0))(webpack@5.108.4(postcss@8.5.19))
-      '@rsbuild/plugin-less': 1.6.4(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))(webpack@5.108.4(postcss@8.5.19))
-      '@rsbuild/plugin-react': 2.0.1(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))
-      '@rsbuild/plugin-rem': 1.0.6(@rsbuild/core@2.1.0(core-js@3.49.0))
-      '@rsbuild/plugin-sass': 1.5.3(@rsbuild/core@2.1.0(core-js@3.49.0))
-      '@rsbuild/plugin-source-build': 1.0.6(@rsbuild/core@2.1.0(core-js@3.49.0))
-      '@rsbuild/plugin-svgr': 2.0.3(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))(typescript@5.7.3)
-      '@rsbuild/plugin-type-check': 1.5.0(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3)
-      '@rsbuild/plugin-typed-css-modules': 1.2.3(@rsbuild/core@2.1.0(core-js@3.49.0))
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
+      '@rsbuild/plugin-assets-retry': 2.0.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))
+      '@rsbuild/plugin-check-syntax': 2.0.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))
+      '@rsbuild/plugin-css-minimizer': 2.0.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(webpack@5.108.4(postcss@8.5.19))
+      '@rsbuild/plugin-less': 1.6.4(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(webpack@5.108.4(postcss@8.5.19))
+      '@rsbuild/plugin-react': 2.0.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))
+      '@rsbuild/plugin-rem': 1.0.6(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))
+      '@rsbuild/plugin-sass': 1.5.3(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))
+      '@rsbuild/plugin-source-build': 1.0.6(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))
+      '@rsbuild/plugin-svgr': 2.0.3(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)
+      '@rsbuild/plugin-type-check': 1.5.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3)
+      '@rsbuild/plugin-typed-css-modules': 1.2.3(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))
       '@swc/core': 1.15.41(@swc/helpers@0.5.23)
       '@swc/helpers': 0.5.23
       autoprefixer: 10.4.27(postcss@8.5.19)
@@ -3637,8 +3879,8 @@ snapshots:
       postcss-media-minmax: 5.0.0(postcss@8.5.19)
       postcss-nesting: 12.1.5(postcss@8.5.19)
       postcss-page-break: 3.0.4(postcss@8.5.19)
-      rsbuild-plugin-rsc: 0.1.1(@rsbuild/core@2.1.0(core-js@3.49.0))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))
-      rspack-manifest-plugin: 5.2.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))
+      rsbuild-plugin-rsc: 0.1.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))
+      rspack-manifest-plugin: 5.2.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))
       ts-deepmerge: 7.0.3
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
@@ -3676,12 +3918,12 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@modern-js/plugin@3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@modern-js/plugin@3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@modern-js/runtime-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/types': 3.6.0
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
       '@swc/helpers': 0.5.23
       jiti: 2.7.0
     transitivePeerDependencies:
@@ -3690,10 +3932,10 @@ snapshots:
       - react
       - react-dom
 
-  '@modern-js/prod-server@3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@modern-js/prod-server@3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@modern-js/runtime-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/server-core': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/server-core': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@swc/helpers': 0.5.23
     transitivePeerDependencies:
@@ -3702,14 +3944,14 @@ snapshots:
       - react
       - react-dom
 
-  '@modern-js/render@3.6.0(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)':
+  '@modern-js/render@3.6.0(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@modern-js/types': 3.6.0
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@swc/helpers': 0.5.23
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
-      react-server-dom-rspack: 0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      react-server-dom-rspack: 0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
 
   '@modern-js/runtime-utils@3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
@@ -3723,13 +3965,13 @@ snapshots:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
-  '@modern-js/runtime@3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)':
+  '@modern-js/runtime@3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@loadable/component': 5.16.7(react@19.2.7)
       '@loadable/server': 5.16.7(@loadable/component@5.16.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/plugin': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/plugin': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/plugin-data-loader': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/render': 3.6.0(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
+      '@modern-js/render': 3.6.0(react-dom@19.2.7(react@19.2.7))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
       '@modern-js/runtime-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/types': 3.6.0
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -3752,9 +3994,9 @@ snapshots:
       - core-js
       - react-server-dom-rspack
 
-  '@modern-js/server-core@3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@modern-js/server-core@3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
-      '@modern-js/plugin': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/plugin': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/runtime-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@swc/helpers': 0.5.23
@@ -3779,10 +4021,10 @@ snapshots:
       - react
       - react-dom
 
-  '@modern-js/server@3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@modern-js/server@3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@modern-js/runtime-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@modern-js/server-core': 3.6.0(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@modern-js/server-core': 3.6.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/server-utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@modern-js/types': 3.6.0
       '@modern-js/utils': 3.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -3818,6 +4060,200 @@ snapshots:
     optionalDependencies:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
+
+  '@module-federation/bridge-react-webpack-plugin@2.7.0':
+    dependencies:
+      '@module-federation/sdk': 2.7.0
+      '@types/semver': 7.5.8
+      semver: 7.6.3
+
+  '@module-federation/bridge-react@2.7.0(react-dom@19.2.7(react@19.2.7))(react-router-dom@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-router@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@module-federation/sdk': 2.7.0
+      lru-cache: 10.4.3
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+    optionalDependencies:
+      react-router: 7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      react-router-dom: 7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+
+  '@module-federation/cli@2.7.0(typescript@5.7.3)':
+    dependencies:
+      '@module-federation/dts-plugin': 2.7.0(typescript@5.7.3)
+      '@module-federation/sdk': 2.7.0
+      commander: 11.1.0
+      jiti: 2.4.2
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
+  '@module-federation/dts-plugin@2.7.0(typescript@5.7.3)':
+    dependencies:
+      '@module-federation/error-codes': 2.7.0
+      '@module-federation/managers': 2.7.0
+      '@module-federation/sdk': 2.7.0
+      '@module-federation/third-party-dts-extractor': 2.7.0
+      adm-zip: 0.5.10
+      isomorphic-ws: 5.0.0(ws@8.21.0)
+      node-schedule: 2.1.1
+      typescript: 5.7.3
+      undici: 7.28.0
+      ws: 8.21.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  '@module-federation/enhanced@2.7.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
+    dependencies:
+      '@module-federation/bridge-react-webpack-plugin': 2.7.0
+      '@module-federation/cli': 2.7.0(typescript@5.7.3)
+      '@module-federation/dts-plugin': 2.7.0(typescript@5.7.3)
+      '@module-federation/error-codes': 2.7.0
+      '@module-federation/inject-external-runtime-core-plugin': 2.7.0(@module-federation/runtime-tools@2.7.0)
+      '@module-federation/managers': 2.7.0
+      '@module-federation/manifest': 2.7.0(typescript@5.7.3)
+      '@module-federation/rspack': 2.7.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)
+      '@module-federation/runtime-tools': 2.7.0
+      '@module-federation/sdk': 2.7.0
+      '@module-federation/webpack-bundler-runtime': 2.7.0
+      schema-utils: 4.3.0
+      tapable: 2.3.0
+      upath: 2.0.1
+    optionalDependencies:
+      typescript: 5.7.3
+      webpack: 5.108.4(postcss@8.5.19)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - bufferutil
+      - utf-8-validate
+
+  '@module-federation/error-codes@2.7.0': {}
+
+  '@module-federation/inject-external-runtime-core-plugin@2.7.0(@module-federation/runtime-tools@2.7.0)':
+    dependencies:
+      '@module-federation/runtime-tools': 2.7.0
+
+  '@module-federation/managers@2.7.0':
+    dependencies:
+      '@module-federation/sdk': 2.7.0
+      empathic: 2.0.0
+
+  '@module-federation/manifest@2.7.0(typescript@5.7.3)':
+    dependencies:
+      '@module-federation/dts-plugin': 2.7.0(typescript@5.7.3)
+      '@module-federation/managers': 2.7.0
+      '@module-federation/sdk': 2.7.0
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
+  '@module-federation/modern-js-v3@2.7.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react-router-dom@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-router@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
+    dependencies:
+      '@module-federation/bridge-react': 2.7.0(react-dom@19.2.7(react@19.2.7))(react-router-dom@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react-router@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(react@19.2.7)
+      '@module-federation/cli': 2.7.0(typescript@5.7.3)
+      '@module-federation/enhanced': 2.7.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+      '@module-federation/node': 2.7.46(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+      '@module-federation/rsbuild-plugin': 2.7.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+      '@module-federation/runtime': 2.7.0
+      '@module-federation/sdk': 2.7.0
+      '@swc/helpers': 0.5.17
+      jiti: 2.4.2
+      lru-cache: 10.4.3
+      node-fetch: 3.3.0
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+      react-error-boundary: 4.1.2(react@19.2.7)
+    optionalDependencies:
+      react-router: 7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      react-router-dom: 7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      typescript: 5.7.3
+    transitivePeerDependencies:
+      - '@rsbuild/core'
+      - '@rspack/core'
+      - bufferutil
+      - utf-8-validate
+      - webpack
+
+  '@module-federation/node@2.7.46(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
+    dependencies:
+      '@module-federation/enhanced': 2.7.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+      '@module-federation/runtime': 2.7.0
+      '@module-federation/sdk': 2.7.0
+      encoding: 0.1.13
+      node-fetch: 2.7.0(encoding@0.1.13)
+      tapable: 2.3.0
+    optionalDependencies:
+      webpack: 5.108.4(postcss@8.5.19)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+
+  '@module-federation/rsbuild-plugin@2.7.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))':
+    dependencies:
+      '@module-federation/enhanced': 2.7.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+      '@module-federation/node': 2.7.46(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)(webpack@5.108.4(postcss@8.5.19))
+      '@module-federation/sdk': 2.7.0
+    optionalDependencies:
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - vue-tsc
+      - webpack
+
+  '@module-federation/rspack@2.7.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)':
+    dependencies:
+      '@module-federation/bridge-react-webpack-plugin': 2.7.0
+      '@module-federation/dts-plugin': 2.7.0(typescript@5.7.3)
+      '@module-federation/inject-external-runtime-core-plugin': 2.7.0(@module-federation/runtime-tools@2.7.0)
+      '@module-federation/managers': 2.7.0
+      '@module-federation/manifest': 2.7.0(typescript@5.7.3)
+      '@module-federation/runtime-tools': 2.7.0
+      '@module-federation/sdk': 2.7.0
+      '@rspack/core': 2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)
+    optionalDependencies:
+      typescript: 5.7.3
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  '@module-federation/runtime-core@2.7.0':
+    dependencies:
+      '@module-federation/error-codes': 2.7.0
+      '@module-federation/sdk': 2.7.0
+
+  '@module-federation/runtime-tools@2.7.0':
+    dependencies:
+      '@module-federation/runtime': 2.7.0
+      '@module-federation/webpack-bundler-runtime': 2.7.0
+
+  '@module-federation/runtime@2.7.0':
+    dependencies:
+      '@module-federation/error-codes': 2.7.0
+      '@module-federation/runtime-core': 2.7.0
+      '@module-federation/sdk': 2.7.0
+
+  '@module-federation/sdk@2.7.0': {}
+
+  '@module-federation/third-party-dts-extractor@2.7.0':
+    dependencies:
+      empathic: 2.0.0
+      exsolve: 1.0.8
+
+  '@module-federation/webpack-bundler-runtime@2.7.0':
+    dependencies:
+      '@module-federation/error-codes': 2.7.0
+      '@module-federation/runtime': 2.7.0
+      '@module-federation/sdk': 2.7.0
 
   '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
     dependencies:
@@ -3908,20 +4344,20 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.5
 
-  '@rsbuild/core@2.1.0(core-js@3.49.0)':
+  '@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)':
     dependencies:
-      '@rspack/core': 2.1.3(@swc/helpers@0.5.23)
+      '@rspack/core': 2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)
       '@swc/helpers': 0.5.23
     optionalDependencies:
       core-js: 3.49.0
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
 
-  '@rsbuild/plugin-assets-retry@2.0.1(@rsbuild/core@2.1.0(core-js@3.49.0))':
+  '@rsbuild/plugin-assets-retry@2.0.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))':
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
 
-  '@rsbuild/plugin-check-syntax@2.0.0(@rsbuild/core@2.1.0(core-js@3.49.0))':
+  '@rsbuild/plugin-check-syntax@2.0.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))':
     dependencies:
       acorn: 8.17.0
       browserslist-to-es-version: 1.4.2
@@ -3929,14 +4365,14 @@ snapshots:
       picocolors: 1.1.1
       source-map: 0.7.6
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
 
-  '@rsbuild/plugin-css-minimizer@2.0.1(@rsbuild/core@2.1.0(core-js@3.49.0))(webpack@5.108.4(postcss@8.5.19))':
+  '@rsbuild/plugin-css-minimizer@2.0.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(webpack@5.108.4(postcss@8.5.19))':
     dependencies:
       css-minimizer-webpack-plugin: 8.0.0(webpack@5.108.4(postcss@8.5.19))
       reduce-configs: 1.1.2
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
     transitivePeerDependencies:
       - '@parcel/css'
       - '@swc/css'
@@ -3946,35 +4382,35 @@ snapshots:
       - lightningcss
       - webpack
 
-  '@rsbuild/plugin-less@1.6.4(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))(webpack@5.108.4(postcss@8.5.19))':
+  '@rsbuild/plugin-less@1.6.4(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(webpack@5.108.4(postcss@8.5.19))':
     dependencies:
       deepmerge: 4.3.1
       less: 4.6.7
-      less-loader: 12.3.3(@rspack/core@2.1.3(@swc/helpers@0.5.23))(less@4.6.7)(webpack@5.108.4(postcss@8.5.19))
+      less-loader: 12.3.3(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(less@4.6.7)(webpack@5.108.4(postcss@8.5.19))
       reduce-configs: 1.1.2
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - webpack
 
-  '@rsbuild/plugin-react@2.0.1(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))':
+  '@rsbuild/plugin-react@2.0.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))':
     dependencies:
-      '@rspack/plugin-react-refresh': 2.0.0(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-refresh@0.18.0)
+      '@rspack/plugin-react-refresh': 2.0.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-refresh@0.18.0)
       react-refresh: 0.18.0
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
     transitivePeerDependencies:
       - '@rspack/core'
 
-  '@rsbuild/plugin-rem@1.0.6(@rsbuild/core@2.1.0(core-js@3.49.0))':
+  '@rsbuild/plugin-rem@1.0.6(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))':
     dependencies:
       deepmerge: 4.3.1
       terser: 5.49.0
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
 
-  '@rsbuild/plugin-sass@1.5.3(@rsbuild/core@2.1.0(core-js@3.49.0))':
+  '@rsbuild/plugin-sass@1.5.3(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))':
     dependencies:
       deepmerge: 4.3.1
       loader-utils: 2.0.4
@@ -3982,47 +4418,47 @@ snapshots:
       reduce-configs: 1.1.2
       sass-embedded: 1.100.0
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
 
-  '@rsbuild/plugin-source-build@1.0.6(@rsbuild/core@2.1.0(core-js@3.49.0))':
+  '@rsbuild/plugin-source-build@1.0.6(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))':
     dependencies:
       fast-glob: 3.3.3
       json5: 2.2.3
       yaml: 2.9.0
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
 
-  '@rsbuild/plugin-svgr@2.0.3(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))(typescript@5.7.3)':
+  '@rsbuild/plugin-svgr@2.0.3(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(typescript@5.7.3)':
     dependencies:
-      '@rsbuild/plugin-react': 2.0.1(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))
+      '@rsbuild/plugin-react': 2.0.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))
       '@svgr/core': 8.1.0(typescript@5.7.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.7.3))
       '@svgr/plugin-svgo': 8.1.0(@svgr/core@8.1.0(typescript@5.7.3))(typescript@5.7.3)
       deepmerge: 4.3.1
       loader-utils: 3.3.1
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - supports-color
       - typescript
 
-  '@rsbuild/plugin-type-check@1.5.0(@rsbuild/core@2.1.0(core-js@3.49.0))(@rspack/core@2.1.3(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3)':
+  '@rsbuild/plugin-type-check@1.5.0(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3)':
     dependencies:
       deepmerge: 4.3.1
       json5: 2.2.3
       reduce-configs: 1.1.2
-      ts-checker-rspack-plugin: 1.5.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3)
+      ts-checker-rspack-plugin: 1.5.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3)
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - tslib
       - typescript
 
-  '@rsbuild/plugin-typed-css-modules@1.2.3(@rsbuild/core@2.1.0(core-js@3.49.0))':
+  '@rsbuild/plugin-typed-css-modules@1.2.3(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))':
     optionalDependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
 
   '@rspack/binding-darwin-arm64@2.1.3':
     optional: true
@@ -4079,19 +4515,20 @@ snapshots:
       '@rspack/binding-win32-ia32-msvc': 2.1.3
       '@rspack/binding-win32-x64-msvc': 2.1.3
 
-  '@rspack/core@2.1.3(@swc/helpers@0.5.23)':
+  '@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)':
     dependencies:
       '@rspack/binding': 2.1.3
     optionalDependencies:
+      '@module-federation/runtime-tools': 2.7.0
       '@swc/helpers': 0.5.23
 
   '@rspack/lite-tapable@1.1.2': {}
 
-  '@rspack/plugin-react-refresh@2.0.0(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-refresh@0.18.0)':
+  '@rspack/plugin-react-refresh@2.0.0(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-refresh@0.18.0)':
     dependencies:
       react-refresh: 0.18.0
     optionalDependencies:
-      '@rspack/core': 2.1.3(@swc/helpers@0.5.23)
+      '@rspack/core': 2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)
 
   '@sinclair/typebox@0.34.52': {}
 
@@ -4231,6 +4668,10 @@ snapshots:
 
   '@swc/counter@0.1.3': {}
 
+  '@swc/helpers@0.5.17':
+    dependencies:
+      tslib: 2.8.1
+
   '@swc/helpers@0.5.23':
     dependencies:
       tslib: 2.8.1
@@ -4282,6 +4723,8 @@ snapshots:
     dependencies:
       csstype: 3.2.3
 
+  '@types/semver@7.5.8': {}
+
   '@types/yargs-parser@21.0.3': {}
 
   '@types/yargs@17.0.35':
@@ -4290,9 +4733,9 @@ snapshots:
 
   '@ungap/structured-clone@1.3.3': {}
 
-  '@vercel/nft@0.29.2':
+  '@vercel/nft@0.29.2(encoding@0.1.13)':
     dependencies:
-      '@mapbox/node-pre-gyp': 2.0.3
+      '@mapbox/node-pre-gyp': 2.0.3(encoding@0.1.13)
       '@rollup/pluginutils': 5.4.0
       acorn: 8.17.0
       acorn-import-attributes: 1.9.5(acorn@8.17.0)
@@ -4441,6 +4884,8 @@ snapshots:
       acorn: 8.17.0
 
   acorn@8.17.0: {}
+
+  adm-zip@0.5.10: {}
 
   agent-base@6.0.2:
     dependencies:
@@ -4688,6 +5133,10 @@ snapshots:
     optionalDependencies:
       typescript: 5.7.3
 
+  cron-parser@4.9.0:
+    dependencies:
+      luxon: 3.7.2
+
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -4831,6 +5280,8 @@ snapshots:
 
   data-uri-to-buffer@3.0.1: {}
 
+  data-uri-to-buffer@4.0.1: {}
+
   debug@4.4.3:
     dependencies:
       ms: 2.1.3
@@ -4904,6 +5355,12 @@ snapshots:
 
   emojis-list@3.0.0: {}
 
+  empathic@2.0.0: {}
+
+  encoding@0.1.13:
+    dependencies:
+      iconv-lite: 0.6.3
+
   enhanced-resolve@5.24.2:
     dependencies:
       graceful-fs: 4.2.11
@@ -4964,6 +5421,8 @@ snapshots:
 
   events@3.3.0: {}
 
+  exsolve@1.0.8: {}
+
   fast-deep-equal@3.1.3: {}
 
   fast-glob@3.3.3:
@@ -4979,6 +5438,11 @@ snapshots:
   fastq@1.20.1:
     dependencies:
       reusify: 1.1.0
+
+  fetch-blob@3.2.0:
+    dependencies:
+      node-domexception: 1.0.0
+      web-streams-polyfill: 3.3.3
 
   file-uri-to-path@1.0.0: {}
 
@@ -5010,6 +5474,10 @@ snapshots:
       es-set-tostringtag: 2.1.0
       hasown: 2.0.4
       mime-types: 2.1.35
+
+  formdata-polyfill@4.0.10:
+    dependencies:
+      fetch-blob: 3.2.0
 
   fraction.js@5.3.4: {}
 
@@ -5127,7 +5595,6 @@ snapshots:
   iconv-lite@0.6.3:
     dependencies:
       safer-buffer: 2.1.2
-    optional: true
 
   ieee754@1.2.1: {}
 
@@ -5197,6 +5664,10 @@ snapshots:
 
   isexe@2.0.0: {}
 
+  isomorphic-ws@5.0.0(ws@8.21.0):
+    dependencies:
+      ws: 8.21.0
+
   jackspeak@3.4.3:
     dependencies:
       '@isaacs/cliui': 8.0.2
@@ -5228,6 +5699,8 @@ snapshots:
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
+  jiti@2.4.2: {}
+
   jiti@2.7.0: {}
 
   js-tokens@4.0.0: {}
@@ -5250,11 +5723,11 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
-  less-loader@12.3.3(@rspack/core@2.1.3(@swc/helpers@0.5.23))(less@4.6.7)(webpack@5.108.4(postcss@8.5.19)):
+  less-loader@12.3.3(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(less@4.6.7)(webpack@5.108.4(postcss@8.5.19)):
     dependencies:
       less: 4.6.7
     optionalDependencies:
-      '@rspack/core': 2.1.3(@swc/helpers@0.5.23)
+      '@rspack/core': 2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)
       webpack: 5.108.4(postcss@8.5.19)
 
   less@4.6.7:
@@ -5297,6 +5770,8 @@ snapshots:
 
   lodash@4.18.1: {}
 
+  long-timeout@0.1.1: {}
+
   loose-envify@1.4.0:
     dependencies:
       js-tokens: 4.0.0
@@ -5310,6 +5785,8 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  luxon@3.7.2: {}
 
   make-dir@5.1.0:
     optional: true
@@ -5403,9 +5880,9 @@ snapshots:
 
   nanoid@3.3.16: {}
 
-  ndepe@0.1.13:
+  ndepe@0.1.13(encoding@0.1.13):
     dependencies:
-      '@vercel/nft': 0.29.2
+      '@vercel/nft': 0.29.2(encoding@0.1.13)
       debug: 4.4.3
       fs-extra: 11.3.6
       mlly: 1.6.1
@@ -5433,13 +5910,29 @@ snapshots:
   node-addon-api@7.1.1:
     optional: true
 
-  node-fetch@2.7.0:
+  node-domexception@1.0.0: {}
+
+  node-fetch@2.7.0(encoding@0.1.13):
     dependencies:
       whatwg-url: 5.0.0
+    optionalDependencies:
+      encoding: 0.1.13
+
+  node-fetch@3.3.0:
+    dependencies:
+      data-uri-to-buffer: 4.0.1
+      fetch-blob: 3.2.0
+      formdata-polyfill: 4.0.10
 
   node-gyp-build@4.8.4: {}
 
   node-releases@2.0.51: {}
+
+  node-schedule@2.1.1:
+    dependencies:
+      cron-parser: 4.9.0
+      long-timeout: 0.1.1
+      sorted-array-functions: 1.3.0
 
   nopt@8.1.0:
     dependencies:
@@ -5899,6 +6392,11 @@ snapshots:
       react: 19.2.7
       scheduler: 0.27.0
 
+  react-error-boundary@4.1.2(react@19.2.7):
+    dependencies:
+      '@babel/runtime': 7.29.7
+      react: 19.2.7
+
   react-fast-compare@3.2.2: {}
 
   react-helmet@6.1.0(react@19.2.7):
@@ -5915,6 +6413,12 @@ snapshots:
 
   react-refresh@0.18.0: {}
 
+  react-router-dom@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+    dependencies:
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+      react-router: 7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+
   react-router@7.15.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       cookie: 1.1.1
@@ -5923,9 +6427,17 @@ snapshots:
     optionalDependencies:
       react-dom: 19.2.7(react@19.2.7)
 
-  react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  react-router@7.18.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
-      '@rspack/core': 2.1.3(@swc/helpers@0.5.23)
+      cookie: 1.1.1
+      react: 19.2.7
+      set-cookie-parser: 2.7.2
+    optionalDependencies:
+      react-dom: 19.2.7(react@19.2.7)
+
+  react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+    dependencies:
+      '@rspack/core': 2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
@@ -5962,18 +6474,18 @@ snapshots:
 
   reusify@1.1.0: {}
 
-  rsbuild-plugin-rsc@0.1.1(@rsbuild/core@2.1.0(core-js@3.49.0))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)):
+  rsbuild-plugin-rsc@0.1.1(@rsbuild/core@2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0))(react-server-dom-rspack@0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)):
     dependencies:
-      '@rsbuild/core': 2.1.0(core-js@3.49.0)
-      react-server-dom-rspack: 0.0.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@rsbuild/core': 2.1.0(@module-federation/runtime-tools@2.7.0)(core-js@3.49.0)
+      react-server-dom-rspack: 0.0.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
 
   rslog@1.3.2: {}
 
-  rspack-manifest-plugin@5.2.2(@rspack/core@2.1.3(@swc/helpers@0.5.23)):
+  rspack-manifest-plugin@5.2.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)):
     dependencies:
       '@rspack/lite-tapable': 1.1.2
     optionalDependencies:
-      '@rspack/core': 2.1.3(@swc/helpers@0.5.23)
+      '@rspack/core': 2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)
 
   run-parallel@1.2.0:
     dependencies:
@@ -5991,8 +6503,7 @@ snapshots:
       es-errors: 1.3.0
       is-regex: 1.2.1
 
-  safer-buffer@2.1.2:
-    optional: true
+  safer-buffer@2.1.2: {}
 
   sass-embedded-all-unknown@1.100.0:
     dependencies:
@@ -6094,6 +6605,13 @@ snapshots:
 
   scheduler@0.27.0: {}
 
+  schema-utils@4.3.0:
+    dependencies:
+      '@types/json-schema': 7.0.15
+      ajv: 8.20.0
+      ajv-formats: 2.1.1(ajv@8.20.0)
+      ajv-keywords: 5.1.0(ajv@8.20.0)
+
   schema-utils@4.3.3:
     dependencies:
       '@types/json-schema': 7.0.15
@@ -6102,6 +6620,8 @@ snapshots:
       ajv-keywords: 5.1.0(ajv@8.20.0)
 
   semver@6.3.1: {}
+
+  semver@7.6.3: {}
 
   semver@7.8.5: {}
 
@@ -6134,6 +6654,8 @@ snapshots:
     dependencies:
       dot-case: 3.0.4
       tslib: 2.8.1
+
+  sorted-array-functions@1.3.0: {}
 
   source-map-js@1.2.1: {}
 
@@ -6220,6 +6742,8 @@ snapshots:
 
   sync-message-port@1.2.0: {}
 
+  tapable@2.3.0: {}
+
   tapable@2.3.3: {}
 
   tar@7.5.20:
@@ -6251,7 +6775,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  ts-checker-rspack-plugin@1.5.2(@rspack/core@2.1.3(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3):
+  ts-checker-rspack-plugin@1.5.2(@rspack/core@2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23))(tslib@2.8.1)(typescript@5.7.3):
     dependencies:
       '@rspack/lite-tapable': 1.1.2
       chokidar: 3.6.0
@@ -6259,7 +6783,7 @@ snapshots:
       picocolors: 1.1.1
       typescript: 5.7.3
     optionalDependencies:
-      '@rspack/core': 2.1.3(@swc/helpers@0.5.23)
+      '@rspack/core': 2.1.3(@module-federation/runtime-tools@2.7.0)(@swc/helpers@0.5.23)
     transitivePeerDependencies:
       - tslib
 
@@ -6273,7 +6797,11 @@ snapshots:
 
   undici-types@6.21.0: {}
 
+  undici@7.28.0: {}
+
   universalify@2.0.1: {}
+
+  upath@2.0.1: {}
 
   update-browserslist-db@1.2.3(browserslist@4.28.4):
     dependencies:
